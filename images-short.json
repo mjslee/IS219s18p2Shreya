@@ -24,5 +24,11 @@
       "description": "This is the 4th image in the set",
       "date": "04/01/2016"
     }
+    var images = '';
+	for( var i=0, max<json.length; ++i ) {
+  	images += '<img src="' + json[i]['image_path'] + json[i]['image_nm'] + '" />';
+	}
+
+	document.getElementById( 'yourcontainer' ).innerHTML = images;
   ]
 }
