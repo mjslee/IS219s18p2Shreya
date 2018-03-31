@@ -1,3 +1,4 @@
+
 body {
 	overflow: auto;
 	font-family: 'Century Gothic', sans-serif;
@@ -16,6 +17,7 @@ body {
 
 #slideShow {	
 	position: relative;
+	('img/more.png').slideDown(300, function() { $ (this).css('height'); });
 }
 
 .photoHolder {
