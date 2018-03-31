@@ -78,11 +78,5 @@
             "description": "Istanbul",
             "date": "01/13/2016"
         }
-        var images = '';
-		for( var i=0, max<json.length; ++i ) {
-  			images += '<img src="' + json[i]['image_path'] + json[i]['image_nm'] + '" />';
-		}
-
-		document.getElementById( 'yourcontainer' ).innerHTML = images;
   ]
 }
