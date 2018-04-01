@@ -181,6 +181,13 @@ mRequest.onload = function() {
     
 
 }, false);
+var url = "http://is219s18p2shreya/images.json";
+$.getJSON(url, function (data) {
+success: readData(data)
+});
+function readData(data) {
+    alert(data[0].FirstName);
+}
 
 function GalleryImage(path, location, description, date) {
 //implement me as an object to hold the following data about an image:
