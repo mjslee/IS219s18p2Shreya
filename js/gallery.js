@@ -52,9 +52,9 @@ if (mCurrentIndex < mImages.length-1) {
 //document.getElementById("photo").src = mImages[mCurrentIndex].img;
 
 //update image details
-document.getElementById("location").innerHTML = mImages[mCurrentIndex].location;
-document.getElementById("description").innerHTML = mImages[mCurrentIndex].description;
-document.getElementById("date").innerHTML = mImages[mCurrentIndex].date;
+//document.getElementById("location").innerHTML = mImages[mCurrentIndex].location;
+//document.getElementById("description").innerHTML = mImages[mCurrentIndex].description;
+//document.getElementById("date").innerHTML = mImages[mCurrentIndex].date;
 
 
 }
