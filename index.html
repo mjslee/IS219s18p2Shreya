@@ -17,32 +17,22 @@
       <div class="photoHolder">
         <img class="thumbnail" id="photo" src="http://placehold.it/518x389?text=Welcome+to+my+Gallery" alt="Gallery Image"/>
       </div>
-      <img class="moreIndicator rot90" src="img/more.png"  class "bottom-center" alt="More Content" 
-     />
-     
-     <div id="target">
-        <img id="prevPhoto" src="img/arrow.png" alt="Previous Photo"  />
-        <div class='rot180'>
-        <div class="right"><right> 
-          
-    
-      </div> 
-      <div id="target">
-        <img id="nextPhoto"  src="img/arrow.png" alt="Next Photo" >
-      
-        <div class='rot280'>  
-        <div class "left"></left>
-        
+      <img class="moreIndicator rot90" id="moreIndicator" src="img/more.png" alt="More Content"/>
+      <div id="nav">
+        <img id="prevPhoto" class='rot180' src="img/arrow.png" alt="Previous Photo"/>
+        <img id="nextPhoto" src="img/arrow.png" alt="Next Photo"/>
+      </div>
+      <div class="img-details">
+        <p class="img-location">Location: </p><span class="info" id="location"></span>
+        <p class="img-description">Description: </p><span class="info" id="description"></span>
+        <p class="img-date">Date: </p><span class="info" id="date"></span>
+      </div>
 
     </div>
-      
+  </div>
+</body>
+</html>
 
-      <div id="target">
-      <div class="details">
-        <p class="location">Location: </p>
-        <p class="description">Description: </p>
-        <p class="date">Date: </p>
-      </div>
       
       <var mURL = "images.json";
       var mRequest = new XMLHttpRequest();
