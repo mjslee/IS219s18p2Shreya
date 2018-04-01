@@ -171,6 +171,16 @@ for(i=0;i<data.images.length;i++) {
 window.addEventListener('load', function() {
 console.log('window loaded');
 
+var xhr = new XMLHttpRequest();
+xhr.open("GET", "http://is219s18p2shreya/images.json", true);
+xhr.onreadystatechange = function() {
+  if (xhr.readyState == 4) {
+    // innerText does not let the attacker inject HTML elements.
+    document.getElementById("resp").innerText = xhr.responseText;
+  }
+}
+xhr.send();
+
 mRequest.open('GET', "http://is219s18p2shreya/images.json", true);
 mRequest.responseType = 'json';
 mRequest.send();
