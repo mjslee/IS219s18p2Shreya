@@ -15,6 +15,7 @@
 
 animate();
 
+
 var mLastFrameTime = 0;
 var mWaitTime = 5000; //time in ms
 function animate() {
@@ -45,6 +46,13 @@ var mCurrentIndex = 0;
 
 // XMLHttpRequest variable
 var mRequest = new XMLHttpRequest();
+
+$.getJSON('images.json', function(data) {
+    $.each(data.items, function(i,f) {
+        $("ul").append("<li>URL: "+f.url+"</li><li>Caption: "+f.caption+"</li><br />");
+
+    });
+});
 
 // Array holding GalleryImage objects (see below).
 var mImages = [];
