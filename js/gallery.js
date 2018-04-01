@@ -171,7 +171,7 @@ function createObjects(data) {
 window.addEventListener('load', function() {
   console.log('window loaded');
   
-  mRequest.open('GET', "https://is219s18p2shreya.herokuapp.com/images.json", true);
+  mRequest.open('GET', "https://localhost.is219s18p2shreya.herokuapp.com/images.json", true);
   mRequest.responseType = 'json';
   mRequest.send();
   mRequest.onload = function() {
