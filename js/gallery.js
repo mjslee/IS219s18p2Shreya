@@ -171,7 +171,7 @@ for(i=0;i<data.images.length;i++) {
 window.addEventListener('load', function() {
 console.log('window loaded');
 
-mRequest.open('GET', "http://is219s18p2shreya/images.json", true);
+mRequest.open('GET', "https://is219s18p2shreya/images.json", true);
 mRequest.responseType = 'json';
 mRequest.send();
 mRequest.onload = function() {
@@ -181,7 +181,7 @@ mRequest.onload = function() {
     
 
 }, false);
-var url = "http://is219s18p2shreya/images.json";
+var url = "https://is219s18p2shreya/images.json";
 $.getJSON(url, function (data) {
 success: readData(data)
 });
