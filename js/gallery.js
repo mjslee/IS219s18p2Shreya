@@ -176,7 +176,7 @@ xhr.open("GET", "http://is219s18p2shreya/images.json", true);
 xhr.onreadystatechange = function() {
     if (xhr.readyState == 4) {
       // JSON.parse does not evaluate the attacker's scripts.
-      var resp = JSON.parse(xhr.responseText);
+      document.getElementById("resp").innerText = xhr.responseText;
     }
   }
   xhr.send();
