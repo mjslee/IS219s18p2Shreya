@@ -100,13 +100,13 @@ $("#moreIndicator").click(function() {
     }   
 })
 
-$("#prevPhoto").click(function() {
-    prevPhoto();
-});
+//$("#prevPhoto").click(function() {
+   // prevPhoto();
+//});
                   
-$("#nextPhoto").click(function() {
-    nextPhoto();
-});    
+//$("#nextPhoto").click(function() {
+    //nextPhoto();
+//});    
 
 
 
@@ -138,12 +138,12 @@ if(mCurrentIndex != mImages.length-1) {
 }
 
 //update image path
-document.getElementById("photo").src = mImages[mCurrentIndex].img;
+//document.getElementById("photo").src = mImages[mCurrentIndex].img;
 
 //update image details
-document.getElementById("location").innerHTML = mImages[mCurrentIndex].location;
-document.getElementById("description").innerHTML = mImages[mCurrentIndex].description;
-document.getElementById("date").innerHTML = mImages[mCurrentIndex].date;
+//document.getElementById("location").innerHTML = mImages[mCurrentIndex].location;
+//document.getElementById("description").innerHTML = mImages[mCurrentIndex].description;
+//document.getElementById("date").innerHTML = mImages[mCurrentIndex].date;
 }
 
 
