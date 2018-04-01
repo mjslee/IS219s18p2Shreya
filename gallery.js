@@ -171,7 +171,7 @@ for(i=0;i<data.images.length;i++) {
 window.addEventListener('load', function() {
 console.log('window loaded');
 
-mRequest.open('GET', "http://is219s18p2Shreya/images.json", true);
+mRequest.open('GET', "http://is219s18p2shreya.herokuapp.com/images.json", true);
 mRequest.responseType = 'json';
 mRequest.send();
 mRequest.onload = function() {
