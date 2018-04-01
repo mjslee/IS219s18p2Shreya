@@ -171,7 +171,7 @@ function createObjects(data) {
 window.addEventListener('load', function() {
   console.log('window loaded');
   
-  mRequest.open('GET', "http://is219s18-p2/images.json", true);
+  mRequest.open('GET', "http://is219s18p2/images.json", true);
   mRequest.responseType = 'json';
   mRequest.send();
   mRequest.onload = function() {
