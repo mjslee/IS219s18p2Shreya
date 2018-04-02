@@ -33,6 +33,25 @@ function animate() {
 
 /************* DO NOT TOUCH CODE ABOVE THIS LINE ***************/
 
+function getQueryParams(qs) {
+    qs = qs.split("+").join(" ");
+    var params = {},
+        tokens,
+        re = /[?&]?([^=]+)=([^&]*)/g;
+    while (tokens = re.exec(qs)) {
+        params[decodeURIComponent(tokens[1])]
+            = decodeURIComponent(tokens[2]);
+}
+    return params;
+}
+var $_GET = getQueryParams(document.location.search);
+
+var mUrl = "images.json";
+if ($_GET["json"] != ""){
+    mUrl = $_GET["json"]
+}
+console.log($_GET["json"]); // would output "John"
+
 var mImages = [];
 var current = 0;
 
@@ -75,49 +94,30 @@ function GalleryImage() {
 
 // XMLHttpRequest variable
 var mRequest = new XMLHttpRequest();
-var jsonString = '';
 
-mRequest.addEventListener("load", reqListener);
-mRequest.open("GET", "images.json");
-mRequest.send();
-
-function reqListener () {
-  console.log(this.responseText);
-  jsonString=this.responseText;
-
-  var mJson = JSON.parse(jsonString);
-
-
-  for (var key in mJson.images){
-      //alert(mJson.images[key].imgPath);
-      
-      var gImage = new GalleryImage();
-      gImage.location=mJson.images[key].imgLocation;
-      gImage.description=mJson.images[key].description;
-      gImage.date=mJson.images[key].date;
-      gImage.img=mJson.images[key].imgPath;
-
-      mImages.push(gImage);
-  }
-
-}
+// Array holding GalleryImage objects (see below).
+var mImages = [];
 
 // URL for the JSON to load by default
 // Some options for you are: images.json, images.short.json; you will need to create your own extra.json later
-var mUrl = 'insert_url_here_to_image_json';
+var mUrl = '';
+
+//url: local vs heroku -----------------------------------------------------------
+//var json_url = "http://localhost/is219s18Candelaria-p2/" //local server
+var json_url = "http://is219s18p2Shreya.herokuapp.com/" //heroku
+
+
+var json = json_url + "images.json";
 
 
 //You can optionally use the following function as your event callback for loading the source of Images from your json data (for HTMLImageObject).
 //@param A GalleryImage object. Use this method for an event handler for loading a gallery Image object (optional).
 function makeGalleryImageOnloadCallback(galleryImage) {
-  return function(e) {
-      galleryImage.img = e.target;
-      mImages.push(galleryImage);
-  }
+	return function(e) {
+		galleryImage.img = e.target;
+		mImages.push(galleryImage);
+	}
 }
-
-
-
 
 $(document).ready( function() {
   // This initially hides the photos' metadata information
