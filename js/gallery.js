@@ -173,7 +173,7 @@ console.log('window loaded');
 
 
 
-mRequest.open('GET', "https://is219s18p2shreya/images.json", true);
+mRequest.open('GET', "https://is219s18p2Shreya.local/images.json", true);
 mRequest.responseType = 'json';
 mRequest.send();
 mRequest.onload = function() {
