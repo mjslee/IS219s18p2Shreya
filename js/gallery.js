@@ -36,7 +36,6 @@ function animate() {
 var mImages = [];
 var current = 0;
 
-
 function swapPhoto() {
   //Add code here to access the #slideShow element.
   //Access the img element and replace its source
@@ -116,6 +115,7 @@ function makeGalleryImageOnloadCallback(galleryImage) {
       mImages.push(galleryImage);
   }
 }
+
 
 
 
